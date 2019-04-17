@@ -6,12 +6,16 @@ int main(){
 
 char name[25] = {'D', 'O', 'U', 'G', 'L', 'a', 'S'};
 
-int key = 10;
+int key;
 char encription[7];
 int size = 7;
 
-
-
+printf("Enter the key ");
+scanf("%d",&key);
+    while(key <-25 || key>25){
+        printf("Key must be between -25 and 25. Enter a new key ");
+        scanf("%d",&key);
+    }
 
 
 //char name[] = char name
@@ -37,7 +41,7 @@ for(int i=0; i<size; i++){
 
 
 }
-
+ printf("\n");
 
 
 return 0;
