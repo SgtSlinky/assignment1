@@ -2,7 +2,7 @@
 
 //encryption(char name[], int key);
 
-int main(){
+int main(){   
 int menu;
 
 printf("1.Encryption of a message with a rotation cipher\n");
