@@ -107,7 +107,7 @@ char name[] = "Attack At Dawn!";                            //message to be enco
         
         
         
-    for (int i = 0; i < size; i++){
+    for (int i = 0; i < size; i++){			    //loop to encode
     
         if (name[i] >= 97 && name[i] <= 122){               //convert lower case letters to upper case letters
 	       name[i] = name[i] - 32;
@@ -213,7 +213,7 @@ char name[] = "QZZQEA QZ RQVF!";                            //message to be deco
         
         
         
-    for (int i = 0; i < size; i++){
+    for (int i = 0; i < size; i++){		//loop to decode
     
         
         switch(name[i]) {                       //qwerty to abcde decipher
@@ -308,7 +308,7 @@ return 0;
 if (menu == 5)
     {
       
-printf("404 not found");
+printf("404 not found");       //didnt get it coded
     
 }
   
@@ -316,11 +316,11 @@ printf("404 not found");
 if (menu == 6)
     {
       
-printf("404 not found");
+printf("404 not found");	//didnt get it coded
     
 }
   
-if (menu >= 7)
+if (menu >= 7)			//exit option
     {
       
 printf
