@@ -16,9 +16,9 @@ printf ("5.Decryption of a message encrypted with a rotation cipher given cipher
 printf ("6.Decryption of a message encrypted with a substitution cipher given cipher text only\n");
 printf ("7.Quit\n\n");
  
-printf ("Select program to run ");
+printf ("Select program to run ");            //ask for program input to run
   
-scanf ("%d", &menu);
+scanf ("%d", &menu);				//read program input
   
  
 if (menu == 1){                                     //menu option 1 encription with rotation cipher of users choice
@@ -30,31 +30,27 @@ if (menu == 1){                                     //menu option 1 encription w
     printf ("Enter the key ");                      //ask for encoding key
     scanf ("%d", &key);
       
-        while (key < -25 || key > 25){
+    while (key < -25 || key > 25){
+	  printf ("Key must be between -25 and 25. Enter a new key ");        //only accept key between -25 and 25
+	  scanf ("%d", &key);
+	  }
+	
+     for (int i = 0; i < size; i++){
+          if (name[i] >= 97 && name[i] <= 122){                       //convert lower case letters to upper case letters
+	  	name[i] = name[i] - 32;
+	  }
 	  
-            printf ("Key must be between -25 and 25. Enter a new key ");        //only accept key between 
-	        scanf ("%d", &key);
-	        }
-      
-
-	        for (int i = 0; i < size; i++){
+          if ((name[i] >= 0 && name[i] <= 64) || (name[i] >= 91 && name[i] <= 96) || (name[i] >= 123)){   //leave special charachters as they are
+	       encription[i] = name[i];
+	       }
 	  
-                if (name[i] >= 97 && name[i] <= 122){                       //convert lower case letters to upper case letters
-	                name[i] = name[i] - 32;
-	                }
-	  
-                if ((name[i] >= 0 && name[i] <= 64) || (name[i] >= 91 && name[i] <= 96) || (name[i] >= 123)){   //leave special charachters as they are
-	               encription[i] = name[i];
-	                }
-	  
-	            else{
-	                encription[i] = name[i] + key;                             //apply encription key
-	      
- 
-                    if (encription[i] > 90){                                    // prevent letters from becoming characters 
-		                encription[i] = 65 + (encription[i] - 91);
-		                }
-                    }
+	  else{
+	      encription[i] = name[i] + key;                             //apply encription key
+	       
+          if (encription[i] > 90){                                    // prevent letters from becoming characters 
+		encription[i] = 65 + (encription[i] - 91);
+		}
+       }
 
     printf ("%c ", encription[i]);
 
@@ -117,81 +113,81 @@ char name[] = "Attack At Dawn!";                            //message to be enco
 	       name[i] = name[i] - 32;
 	       }
         switch(name[i]) {
-                                        //substitution 
+                                        //abcde to qwerty encoding 
     
            case 'A': name[i] = 'Q';
            break;
        
-           case  'B': name[i] = 'W';
+           case 'B': name[i] = 'W';
            break;
            
-           case  'C': name[i] = 'E';
+           case 'C': name[i] = 'E';
            break;
        
-           case  'D': name[i] = 'R';
+           case 'D': name[i] = 'R';
            break;
        
-           case  'E': name[i] = 'T';
+           case 'E': name[i] = 'T';
            break;
        
            case 'F': name[i] = 'Y';
            break;
        
-           case  'G': name[i] = 'U';
+           case 'G': name[i] = 'U';
            break;
        
-           case  'H': name[i] = 'I';
+           case 'H': name[i] = 'I';
            break;
        
-           case  'I': name[i] = 'O';
+           case 'I': name[i] = 'O';
            break;
        
-           case  'J': name[i] = 'P';
+           case 'J': name[i] = 'P';
            break;
        
-           case  'K': name[i] = 'A';
+           case 'K': name[i] = 'A';
            break;
        
-           case  'L': name[i] = 'S';
+           case 'L': name[i] = 'S';
            break;
        
-           case  'M': name[i] = 'D';
+           case 'M': name[i] = 'D';
            break;
        
            case 'N': name[i] = 'F';
            break;
        
-           case  'O': name[i] = 'G';
+           case 'O': name[i] = 'G';
            break;
        
-           case  'P': name[i] = 'H';
+           case 'P': name[i] = 'H';
            break;
        
-           case  'Q': name[i] = 'J';
+           case 'Q': name[i] = 'J';
            break;
        
-           case  'R': name[i] = 'K';
+           case 'R': name[i] = 'K';
            break;
        
-           case  'S': name[i] = 'L';
+           case 'S': name[i] = 'L';
            break;
        
-           case  'T': name[i] = 'Z';
+           case 'T': name[i] = 'Z';
            break;
        
            case 'U': name[i] = 'X';
            break;
        
-           case  'V': name[i] = 'C';
+           case 'V': name[i] = 'C';
            break;
        
-           case  'W': name[i] = 'V';
+           case 'W': name[i] = 'V';
            break;
        
            case 'X': name[i] = 'B';
            break;
        
-           case  'Y': name[i] = 'N';
+           case 'Y': name[i] = 'N';
            break;
        
            case 'Z': name[i] = 'M';
@@ -211,7 +207,7 @@ return 0;
 if(menu == 4){
 
       
-char name[] = "QZZQEA QZ RQVF!";                            //message to be encoded
+char name[] = "QZZQEA QZ RQVF!";                            //message to be decoded
     size = sizeof (name);                                   //size of message
     
         
@@ -220,78 +216,78 @@ char name[] = "QZZQEA QZ RQVF!";                            //message to be enco
     for (int i = 0; i < size; i++){
     
         
-        switch(name[i]) {
+        switch(name[i]) {                       //qwerty to abcde decipher
     
-       case  'Q': name[i]  = 'A';
+       case 'Q': name[i]  = 'A';
        break;
        
-       case  'W': name[i]  = 'B';
+       case 'W': name[i]  = 'B';
        break;
        
-       case  'E': name[i]  = 'C';
+       case 'E': name[i]  = 'C';
        break;
        
-       case  'R': name[i]  = 'D';
+       case 'R': name[i]  = 'D';
        break;
        
-       case  'T': name[i]  = 'E';
+       case 'T': name[i]  = 'E';
        break;
        
        case 'Y': name[i]  = 'F';
        break;
        
-       case  'U': name[i]  = 'G';
+       case 'U': name[i]  = 'G';
        break;
        
-       case  'I': name[i]  = 'H';
+       case 'I': name[i]  = 'H';
        break;
        
-       case  'O': name[i]  = 'I';
+       case 'O': name[i]  = 'I';
        break;
        
-       case  'P': name[i]  = 'J';
+       case 'P': name[i]  = 'J';
        break;
        
-       case  'A': name[i]  = 'K';
+       case 'A': name[i]  = 'K';
        break;
        
-       case  'S': name[i]  = 'L';
+       case 'S': name[i]  = 'L';
        break;
        
-       case  'D': name[i]  = 'M';
+       case 'D': name[i]  = 'M';
        break;
        
-       case  'F': name[i]  = 'N';
+       case 'F': name[i]  = 'N';
        break;
        
-       case  'G': name[i]  = 'O';
+       case 'G': name[i]  = 'O';
        break;
        
-       case  'H': name[i]  = 'P';
+       case 'H': name[i]  = 'P';
        break;
        
-       case  'J': name[i]  = 'Q';
+       case 'J': name[i]  = 'Q';
        break;
        
-       case  'K': name[i]  = 'R';
+       case 'K': name[i]  = 'R';
        break;
        
-       case  'L': name[i]  = 'S';
+       case 'L': name[i]  = 'S';
        break;
        
-       case  'Z': name[i]  = 'T';
+       case 'Z': name[i]  = 'T';
        break;
        
-       case  'X': name[i]  = 'U';
+       case 'X': name[i]  = 'U';
        break;
        
-       case  'C': name[i]  = 'V';
+       case 'C': name[i]  = 'V';
        break;
        
        case 'V': name[i]  = 'W';
        break;
        
-       case  'B': name[i]  = 'X';
+       case 'B': name[i]  = 'X';
        break;
        
        case 'N': name[i]  = 'Y';
@@ -328,17 +324,10 @@ if (menu >= 7)
     {
       
 printf
-	("Thank you have a nice day \nProgran will self destruct in 5 seconds \n5\n4\n3\n2\n1\nfzzt (insert puff of smoke) ");
+	("Thank you have a nice day \nProgran will self destruct in 5 seconds \n5 \n4 \n3 \n2 \n1 \nfzzt (insert puff of smoke) ");
     
 }
 
 return 0;
 
 }
-
-
- 
-
-
-
-
