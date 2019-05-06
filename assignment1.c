@@ -1,9 +1,9 @@
 
 #include <stdio.h>
 
-int
-main (){
-  
+
+int main (){
+int i;
 int size;
 int menu;
   
@@ -106,18 +106,210 @@ return 0;
  
 if (menu == 3){
 
+char name[] = "Attack At Dawn!";                            //message to be encoded
+    size = sizeof (name);                                   //size of message
     
-}
+        
+        
+        
+    for (int i = 0; i < size; i++){
+    
+        if (name[i] >= 97 && name[i] <= 122){               //convert lower case letters to upper case letters
+	       name[i] = name[i] - 32;
+	       }
+        switch(name[i]) {
+                                        //have array here
+    
+           case 'A': name[i] = 'Q';
+           break;
+       
+           case  'B': name[i] = 'W';
+           break;
+           
+           case  'C': name[i] = 'E';
+           break;
+       
+           case  'D': name[i] = 'R';
+           break;
+       
+           case  'E': name[i] = 'T';
+         break;
+       
+         case 'F': name[i] = 'Y';
+         break;
+       
+       case  'G': name[i] = 'U';
+       break;
+       
+       case  'H': name[i] = 'I';
+       break;
+       
+       case  'I': name[i] = 'O';
+       break;
+       
+       case  'J': name[i] = 'P';
+       break;
+       
+       case  'K': name[i] = 'A';
+       break;
+       
+       case  'L': name[i] = 'S';
+       break;
+       
+       case  'M': name[i] = 'D';
+       break;
+       
+       case 'N': name[i] = 'F';
+       break;
+       
+       case  'O': name[i] = 'G';
+       break;
+       
+       case  'P': name[i] = 'H';
+       break;
+       
+       case  'Q': name[i] = 'J';
+       break;
+       
+       case  'R': name[i] = 'K';
+       break;
+       
+       case  'S': name[i] = 'L';
+       break;
+       
+       case  'T': name[i] = 'Z';
+       break;
+       
+       case 'U': name[i] = 'X';
+       break;
+       
+       case  'V': name[i] = 'C';
+       break;
+       
+       case  'W': name[i] = 'V';
+       break;
+       
+       case 'X': name[i] = 'B';
+       break;
+       
+       case  'Y': name[i] = 'N';
+       break;
+       
+       case 'Z': name[i] = 'M';
+       break;
+        }
+    printf ("%c ", name[i]);
+    }
+
+printf ("\n");
+return 0;
+
+}    
+    
+
   
  
-if (menu == 4)
-    {
+if(menu == 4){
+
       
-printf("404 not found");
+char name[] = "QZZQEA QZ RQVF!";                            //message to be encoded
+    size = sizeof (name);                                   //size of message
     
-}
-  
- 
+        
+        
+        
+    for (int i = 0; i < size; i++){
+    
+        
+        switch(name[i]) {
+    
+       case  'Q': name[i]  = 'A';
+       break;
+       
+       case  'W': name[i]  = 'B';
+       break;
+       
+       case  'E': name[i]  = 'C';
+       break;
+       
+       case  'R': name[i]  = 'D';
+       break;
+       
+       case  'T': name[i]  = 'E';
+       break;
+       
+       case 'Y': name[i]  = 'F';
+       break;
+       
+       case  'U': name[i]  = 'G';
+       break;
+       
+       case  'I': name[i]  = 'H';
+       break;
+       
+       case  'O': name[i]  = 'I';
+       break;
+       
+       case  'P': name[i]  = 'J';
+       break;
+       
+       case  'A': name[i]  = 'K';
+       break;
+       
+       case  'S': name[i]  = 'L';
+       break;
+       
+       case  'D': name[i]  = 'M';
+       break;
+       
+       case  'F': name[i]  = 'N';
+       break;
+       
+       case  'G': name[i]  = 'O';
+       break;
+       
+       case  'H': name[i]  = 'P';
+       break;
+       
+       case  'J': name[i]  = 'Q';
+       break;
+       
+       case  'K': name[i]  = 'R';
+       break;
+       
+       case  'L': name[i]  = 'S';
+       break;
+       
+       case  'Z': name[i]  = 'T';
+       break;
+       
+       case  'X': name[i]  = 'U';
+       break;
+       
+       case  'C': name[i]  = 'V';
+       break;
+       
+       case 'V': name[i]  = 'W';
+       break;
+       
+       case  'B': name[i]  = 'X';
+       break;
+       
+       case 'N': name[i]  = 'Y';
+       break;
+       
+       case 'M': name[i]  = 'Z';
+       break;
+        }
+    printf ("%c ", name[i]);
+    }
+
+printf ("\n");
+return 0;
+
+}    
+    
+
 if (menu == 5)
     {
       
@@ -147,11 +339,6 @@ return 0;
 
 
  
-
-
-
-
-
 
 
 
