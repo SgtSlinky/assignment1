@@ -86,15 +86,14 @@ if (menu == 2){                                                         //menu o
 	  
         else{
 	        encription[i] = name[i] - key;                                                                 //apply decription key
-            }  
-    
- 
-    if (encription[i] < 65){
-        encription[i] = 91 - 65 + (encription[i]);                                                      //loop alphabet so letters dont become characters
-        }
-    
-    
-    printf ("%c ", encription[i]);
+            
+            if (encription[i] < 65){
+            encription[i] = 91 - 65 + (encription[i]);                                                      //loop alphabet so letters dont become characters
+            }
+            
+        }  
+
+    printf ("%c ", encription[i]);                          //print decoded message
     
 }
       
@@ -118,7 +117,7 @@ char name[] = "Attack At Dawn!";                            //message to be enco
 	       name[i] = name[i] - 32;
 	       }
         switch(name[i]) {
-                                        //have array here
+                                        //substitution 
     
            case 'A': name[i] = 'Q';
            break;
@@ -133,70 +132,70 @@ char name[] = "Attack At Dawn!";                            //message to be enco
            break;
        
            case  'E': name[i] = 'T';
-         break;
+           break;
        
-         case 'F': name[i] = 'Y';
-         break;
+           case 'F': name[i] = 'Y';
+           break;
        
-       case  'G': name[i] = 'U';
-       break;
+           case  'G': name[i] = 'U';
+           break;
        
-       case  'H': name[i] = 'I';
-       break;
+           case  'H': name[i] = 'I';
+           break;
        
-       case  'I': name[i] = 'O';
-       break;
+           case  'I': name[i] = 'O';
+           break;
        
-       case  'J': name[i] = 'P';
-       break;
+           case  'J': name[i] = 'P';
+           break;
        
-       case  'K': name[i] = 'A';
-       break;
+           case  'K': name[i] = 'A';
+           break;
        
-       case  'L': name[i] = 'S';
-       break;
+           case  'L': name[i] = 'S';
+           break;
        
-       case  'M': name[i] = 'D';
-       break;
+           case  'M': name[i] = 'D';
+           break;
        
-       case 'N': name[i] = 'F';
-       break;
+           case 'N': name[i] = 'F';
+           break;
        
-       case  'O': name[i] = 'G';
-       break;
+           case  'O': name[i] = 'G';
+           break;
        
-       case  'P': name[i] = 'H';
-       break;
+           case  'P': name[i] = 'H';
+           break;
        
-       case  'Q': name[i] = 'J';
-       break;
+           case  'Q': name[i] = 'J';
+           break;
        
-       case  'R': name[i] = 'K';
-       break;
+           case  'R': name[i] = 'K';
+           break;
        
-       case  'S': name[i] = 'L';
-       break;
+           case  'S': name[i] = 'L';
+           break;
        
-       case  'T': name[i] = 'Z';
-       break;
+           case  'T': name[i] = 'Z';
+           break;
        
-       case 'U': name[i] = 'X';
-       break;
+           case 'U': name[i] = 'X';
+           break;
        
-       case  'V': name[i] = 'C';
-       break;
+           case  'V': name[i] = 'C';
+           break;
        
-       case  'W': name[i] = 'V';
-       break;
+           case  'W': name[i] = 'V';
+           break;
        
-       case 'X': name[i] = 'B';
-       break;
+           case 'X': name[i] = 'B';
+           break;
        
-       case  'Y': name[i] = 'N';
-       break;
+           case  'Y': name[i] = 'N';
+           break;
        
-       case 'Z': name[i] = 'M';
-       break;
+           case 'Z': name[i] = 'M';
+           break;
         }
     printf ("%c ", name[i]);
     }
@@ -325,7 +324,7 @@ printf("404 not found");
     
 }
   
-if (menu == 7)
+if (menu >= 7)
     {
       
 printf
